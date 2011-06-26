@@ -66,6 +66,111 @@ from one page to another within one html document.
 
 ## Header, Footer
 
+Creating a header and footer are also semantic using the data-role
+attribute.
+
+``` html
+<div data-role='page'>
+  <div data-role='header'>
+    <h1>Header Info Here</h1>
+  </div>
+  ...
+  <div data-role='footer'>
+    <p>Footer Info here</p>
+  </div>
+</div>
+```
+
+You can control the theme of the header and footer using the data-theme
+attribute.
+
+``` html
+<div data-role='header' data-theme='b'>
+  ...
+</div>
+```
+
+### Fixed Screen Toolbars
+
+You can create fixed headers and footers by setting the
+data-position to 'fixed'
+
+This provides an interesting effect, basically when the user scrolls
+up or down, the header or footer disappears, when the scrolling is 
+completed, they re-appear in their fixed position.  In the alpha
+releases we had trouble using footers on various devices and layout
+changes.  We abandoned fixed footers and just use the footers at the
+bottom as in a natural web page.  
+
+``` html
+<div data-role='footer' data-position='fixed'>
+ ...
+</div>
+```
+
+### Fullscreen Toolbars
+
+You can create fullscreen headers and footers by setting
+the data-position attribute to 'fullscreen'
+
+This has a similar effect as the fixed, except the bar only appears
+after the user clicks or taps the screen.
+
+``` html
+<div data-role='footer' data-position='fullscreen'>
+  ...
+</div>
+```
+
+### Navigation Buttons in Headers 
+
+When you place a link element in the header toolbar, jQueryMobile
+will automatically render it as a button, and put it to the left of the
+title.  The second link will be placed at the right of the title.
+
+``` html
+<div data-role='header'>
+  <a href='#'>Left</a>
+  <h1>Title</h1>
+  <a href='#'>Right</a>
+</div>
+```
+
+You can force the position of a button by using the class attribute of
+the link elelment.
+
+``` html
+<div data-role='header'>
+  <h1>Title</h1>
+  <a href='#' class='ui-btn-right'>Right</a>
+</div>
+```
+
+### Adding the Back Button to a page
+
+The back button is automatically disabled by default, you can re-enable
+on a per page level by adding the "data-add-back-btn" attribute and
+setting it to true on the page element.
+
+``` html
+<div data-role='page' data-add-back-btn="true">
+  ...
+</div>
+```
+
+You can also define the text of the back button on the page element.
+
+``` html
+<div data-role='page' data-add-back-btn="true" data-back-btn-text="previous">
+  ...
+</div>
+```
+
+
+
+
+```
+
 ## List Views
 
 ## Collapsible Content
