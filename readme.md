@@ -22,7 +22,47 @@ browsers.
 
 ## Head
 
+When setting up your jQueryMobile site you may want to use the boiler
+plate [jQueryBoilerPlate](http://jquerymobile.com/demos/1.0b1/#/demos/1.0b1/docs/pages/page-template.html)
+
+There are some key things to remember:
+
+* Set the Viewport
+
+``` html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+* Insert your scripts between the jQuery and jQueryMobile script
+  includes
+
+``` html
+<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<script> [Your Scripts Here] </script>
+<script src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script>
+```
+
+* Don't forget to link to the css
+
+``` html
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" />
+```
+
 ## Page
+
+Each mobile page is defined using a div tag with a data-role attribute
+of "page".  The "id" attribute is the unique navigation element to move
+from one page to another within one html document.  
+
+``` html
+<div id='home' data-role='page'>
+...
+</div>
+
+...
+
+<a href='#home'>Home</a>
+```
 
 ## Header, Footer
 
