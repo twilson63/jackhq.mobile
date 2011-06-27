@@ -14,6 +14,8 @@
       line-height: 20px;
       color: rgba(0,0,0,0.7);
     }
+
+    div[
   </style>
  </head> 
 <body> 
@@ -126,7 +128,8 @@
   <div data-role='content'>
     <ul data-role='listview'>
       <li data-role='list-divider'>Philosophy</li>
-      <li> 
+    </ul>
+    <div data-role='collapsible-set'> 
       <div data-role='collapsible' data-collapsed="true" data-theme='b'>
         <h3>Agile Methodology</h3>
         <div>Agile is not only a development methodology, but it is a state of mind. Agile is the willingness to accept that all software is able to change. With this mindset, we embrace the change and realize the importance and need for change in software.</div>
@@ -148,8 +151,7 @@
       <div data-role='collapsible' data-collapsed='true' data-theme='b'>
         <div>We manage all of our applications in the cloud using Amazon Web Services and Heroku to provide cost-effective, scalable solutions that remove the burden of IT management from our clients. We have been working with the Cloud since 2007 and are experts in this area.</div>
       </div>
-    </li>
-  </ul>
+    </div>
   </div>
   <div data-role='footer'>
     <div data-role='navbar'>
@@ -178,23 +180,23 @@
   <div data-role='content'>
     <ul data-role='listview'>
       <li data-role='list-divider'>Community</li>
-      <li>
-        <div data-role='collapsible' data-theme='b'>
-          <h3>Community</h3>
-          <div>At Jack Russell Software, we have some of the finest Ruby on Rails Developers. And we are constantly striving to better our craft as well as reach out to the community to learn and share experiences in Software Development.</div>
-        </div>
-        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-          <h3>Local Participation</h3>
-          <div>The second Thursday of every month we host the Ruby Users Group Meetup. You can find out more about the <a href='http://charlestonruby.org'>Charleston Ruby Group</a></div>
-          <div>We are happy to sponsor and encourage local development hacking by sponsoring and participating in events like BarCampCHS and <a href='http://www.facebook.com/pages/SuperHappyDevHouse-CHS/182758535071729?v=wall&filter=2'>Super Happy Dev House</a></div>
-        </div>
-        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-          <h3>Open Source Community</h3>
-          <div>We also are very passionate about "Open Source" and sharing and contributing to open source projects. Not only to we use several open source technologies we constantly submit patches and contribute to all kinds of open source projects. We have also created applications and projects that are released as open source for usage.</div>
-          <div><a href='http://html2haml.heroku.com'>Html2Haml</a> is one of our most popular applications that is used by 200 developers a day to help them work with Haml a clean dsl for HTML.</div>
-        </div>
-      </li>
     </ul>
+    <div data-role='collapsible-set'>
+      <div data-role='collapsible' data-theme='b'>
+        <h3>Community</h3>
+        <div>At Jack Russell Software, we have some of the finest Ruby on Rails Developers. And we are constantly striving to better our craft as well as reach out to the community to learn and share experiences in Software Development.</div>
+      </div>
+      <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+        <h3>Local Participation</h3>
+        <div>The second Thursday of every month we host the Ruby Users Group Meetup. You can find out more about the <a href='http://charlestonruby.org'>Charleston Ruby Group</a></div>
+        <div>We are happy to sponsor and encourage local development hacking by sponsoring and participating in events like BarCampCHS and <a href='http://www.facebook.com/pages/SuperHappyDevHouse-CHS/182758535071729?v=wall&filter=2'>Super Happy Dev House</a></div>
+      </div>
+      <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+        <h3>Open Source Community</h3>
+        <div>We also are very passionate about "Open Source" and sharing and contributing to open source projects. Not only to we use several open source technologies we constantly submit patches and contribute to all kinds of open source projects. We have also created applications and projects that are released as open source for usage.</div>
+        <div><a href='http://html2haml.heroku.com'>Html2Haml</a> is one of our most popular applications that is used by 200 developers a day to help them work with Haml a clean dsl for HTML.</div>
+      </div>
+    </div>
   </div>
   <div data-role='footer'>
     <div data-role='navbar'>
@@ -223,49 +225,50 @@
   <div data-role='content'>
     <ul data-role='listview'>
       <li data-role='list-divider'>Contact Us By</li>
-      <li>
-        <div data-role='collapsible' data-theme='b'>
-          <h3>Phone</h3>
-          <h2><a href='tel:843-606-0637'>843-606-0637</a></h2>
-        </div>
-        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-          <h3>Email</h3>
-          <h2><a href="mailto:info@jackhq.com?subject=Contact%20JackHq">info@jackhq.com</a></h2>
-        </div>
-        <div data-role='collapsible' data-theme='b'>
-          <h3>Tweet</h3>
-          <h2><a href='http://twitter.com/jackhq'>@jackhq</a></h2>
-        </div>
-        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-          <h3>Location</h3>
-          <address>1067 Cliffwood Drive, Mount Pleasant, SC  29464</address>
-        </div>
-        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-          <h3>Form</h3>
-          <form>
-            <div data-role='fieldcontain'>
-              <label for='first_name'>First</label>
-              <input type='text' id='first_name' name='first_name' />
-              <label for='last_name'>Last</label>
-              <input type='text' id='last_name' name='last_name' />
-            </div>
-            <div data-role='fieldcontain'>
-              <label for='email'>Email</label>
-              <input type='text' id='email' name='email' />
-            </div>
-            <div data-role='fieldcontain'>
-              <label for='phone'>Phone</label>
-              <input type='phone' id='phone' name='phone' />
-            </div>
-            <div data-role='fieldcontain'>
-              <label for='details'>Details</label>
-              <textarea id='details' name='details'></textarea>
-            </div>
-            <button>Submit</button>
-          </form>
-        </li>
-      </ul>
+    </ul>
+    <div data-role='collapsible-set'>
+      <div data-role='collapsible' data-theme='b'>
+        <h3>Phone</h3>
+        <h2><a href='tel:843-606-0637'>843-606-0637</a></h2>
+      </div>
+      <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+        <h3>Email</h3>
+        <h2><a href="mailto:info@jackhq.com?subject=Contact%20JackHq">info@jackhq.com</a></h2>
+      </div>
+      <div data-role='collapsible' data-theme='b'>
+        <h3>Tweet</h3>
+        <h2><a href='http://twitter.com/jackhq'>@jackhq</a></h2>
+      </div>
+      <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+        <h3>Location</h3>
+        <address>1067 Cliffwood Drive, Mount Pleasant, SC  29464</address>
+      </div>
+      <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+        <h3>Form</h3>
+        <form>
+          <div data-role='fieldcontain'>
+            <label for='first_name'>First</label>
+            <input type='text' id='first_name' name='first_name' />
+            <label for='last_name'>Last</label>
+            <input type='text' id='last_name' name='last_name' />
+          </div>
+          <div data-role='fieldcontain'>
+            <label for='email'>Email</label>
+            <input type='text' id='email' name='email' />
+          </div>
+          <div data-role='fieldcontain'>
+            <label for='phone'>Phone</label>
+            <input type='phone' id='phone' name='phone' />
+          </div>
+          <div data-role='fieldcontain'>
+            <label for='details'>Details</label>
+            <textarea id='details' name='details'></textarea>
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
+  </div>
   <div data-role='footer'>
     <div data-role='navbar'>
       <ul>
