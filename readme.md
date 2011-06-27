@@ -363,10 +363,9 @@ have up to 26 themes.  jQueryMobile comes with 5 built in.  These allow
 you to change the view of many items.  By setting the data-theme attribute
 and providing it a letter, will change the color and view of the theme.
 
-It is real easiy to creat your own themes - check out
+It is real easiy to create your own themes - check out
 [jQueryMobile](http://jquerymobile.com)
 
----
 
 ## Please see index.html to see most of these features in action.
 
