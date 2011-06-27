@@ -165,11 +165,50 @@ You can also define the text of the back button on the page element.
   ...
 </div>
 ```
+## Navigation Bars
 
+It is equally as easy to setup navigation bars in jQueryMobile.  With
+the declaritive style you simply specify you navbar via the data-role
+attribute.
 
+Inside the navbar you want to add an unordered list element with line
+item elements.  These will automatically paint inline and divide the
+width of the parent into button sections.
 
+Navbars can also specify a particular button as active by adding a
+ui-btn-active class to the the particular element.
+
+``` html
+<div data-role='navbar'>
+  <ul>
+    <li class='ui-btn-active'><a href='#'>Menu1</a></li>
+    <li><a href='#'>Menu2</a></li>  
+  </ul>
+</div>
 
 ```
+
+You can also add icons and position icons to the buttons in the 
+navbar, just like you can with any button.
+
+``` html
+<a href='#' data-icon='home' data-iconpos='top'>Home</a>
+```
+
+For more information see: [jQuery NavBar](http://jquerymobile.com/demos/1.0b1/#/demos/1.0b1/docs/toolbars/docs-navbar.html)
+
+## Buttons
+
+Any submit, button, reset, image will automatically default to the
+button css presentation.  When using link elements in headers and
+footers, they will also default to the button style.  But when it the
+link is outside of the header or footer and in the content container,
+you must add the data-button attribute to the element.
+
+``` html
+<a href='#' data-button='true'>My Custom Button</a>
+```
+
 
 ## List Views
 
