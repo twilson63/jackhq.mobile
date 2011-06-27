@@ -209,9 +209,163 @@ you must add the data-button attribute to the element.
 <a href='#' data-button='true'>My Custom Button</a>
 ```
 
+If you want more compact buttons then wrap them with a div with
+an attribute of data-inline and set it to true.
+
+``` html
+<div data-inline="true">
+	<a href="index.html" data-role="button">Cancel</a>
+	<a href="index.html" data-role="button" data-theme="b">Save</a>
+</div>
+```
+
+### Grouping buttons
+
+You can group buttons in a horizontal group.
+
+``` html
+<div data-role='controlgroup'>
+  <a href='#'>Button1</a>
+  <a href='#'>Button2</a>
+</div>
+```
+
+### Button Themes
+
+You can control the color of your buttons by using the
+data-theme attribute.
+
+``` html
+<a href='#' data-theme='e'>Button</a>
+```
 
 ## List Views
 
+List views is by far the most powerful feature of the 
+jQuery mobile platform.  It makes it very simple to 
+add and organize your list of data.
+
+``` html
+<ul data-role='listview'>
+  ...
+</ul>
+```
+
+When placing links inside a listview ul, jQueryMobile 
+automatically makes the entire listitem clickable.
+
+If you add two link elements in one li of the listview,
+jQueryMobile will create a split button, where the left
+side of the li will click to the first link element and the
+right side will click to the second element.
+
+You can also build nested lists.
+
+You can add a count bubble to your items.
+
+``` html
+<ul data-role='listview'>
+  <li><a href='#'>Item 1</a><span class='ui-li-count'>3</span></li>
+</ul>
+```
+
+You can add supplemental information to your item using the ui-li-aside
+class.
+
+``` html
+<ul data-role='listview'>
+  <li><a href='#'>Item 1</a><span class='ui-li-aside'>Author</span></li>
+</ul>
+```
+
+Thumbnails are automatically reconized as the first image in the li
+element and resized to 80x80 px.
+
+Icons can be added as well, as span elements.
+
+If you need to dynamically add items to lists, simply call the
+listview('refresh') method.
+
+### List Divider
+
+List Divider will create a section header as a list line item.
+
+### Search Filter
+
+Simply set data-filter attribute on the ul element to true and you 
+have a searchable list.
+
+``` html
+<ul data-role='listview' data-filter='true'>
+ ...
+</ul>
+```
+
+### Inset List
+
+You can switch your listview to an inset view vs the list wrapping
+from end to end of your screens width.
+
+``` html
+<ul data-role='listview' data-inset='true'>
+...
+</ul>
+```
+
+### Summary 
+
+If you do not like any of the features of the list view, it is pretty
+easy to create your own custom list, and if you need momentum scrolling
+it is pretty easy to add a jquery plugin to handle this as well.
+
+But the Listview component is a great solution to provide quick
+functionality across a host of devices.
+
+
 ## Collapsible Content
+
+Collapsible Content allows you to hide and show sections of your page.
+
+This is great to allow your users to not have to scroll long sections 
+of content.  
+
+* One thing to look out for, is the usage of paragraph tags inside
+collapsible content or list views, jQueryMobile will automatically
+concantenate the length.
+
+``` html
+<div data-role='callapsible'>
+  <h3>Header</h3>
+  <div>Hidden or Shown text based on the users click</div>
+</div>
+```
+
+The h3 tag text is displayed at all times, the rest is hidden.
+
+The default is to show the collapsible content, but you can override 
+this default by using the data-collapsed attribute and set it to true.
+
+### Collapsible sets
+
+``` html
+<div data-role='collapsible-set'>
+  <div data-role='collapsible'>
+    <h3>XXXX</h3>
+    <div>Data</div>
+  </div>
+</div>
+```
+
+## Themes
+
+The themes are designed by using the letters of the alphabet.  You can
+have up to 26 themes.  jQueryMobile comes with 5 built in.  These allow
+you to change the view of many items.  By setting the data-theme attribute
+and providing it a letter, will change the color and view of the theme.
+
+It is real easiy to creat your own themes - check out
+[jQueryMobile](http://jquerymobile.com)
+
+
 
 
