@@ -4,22 +4,29 @@
 	<title>Jack Russell Software</title> 
   <meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" />
+  <link rel='stylesheet' href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" />
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script>
   <style type='text/css'>
+    div[data-role="collapsible"] div {
+      margin-bottom: 10px;
+      letter-spacing: .8px;
+      line-height: 20px;
+      color: rgba(0,0,0,0.7);
+    }
   </style>
  </head> 
 <body> 
-
 <div data-role="page">
-  <div data-role='navbar'>
-    <ul>
-      <li><a href='#' class='ui-btn-active'>Team</a></li>
-      <li><a href='#philosophy'>Philosophy</a></li>
-      <li><a href='#community'>Community</a></li>
-      <li><a href='#contact'>Contact</a></li>
-    </ul>
+  <div data-role='header' data-theme='a'>
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='#' class='ui-btn-active'>Team</a></li>
+        <li><a href='#philosophy'>Philosophy</a></li>
+        <li><a href='#community'>Community</a></li>
+        <li><a href='#contact'>Contact</a></li>
+      </ul>
+    </div>
   </div>
   <div data-role='header' data-theme='c'>
     <center><img src='jackhq-logo.png' /></center>
@@ -92,126 +99,183 @@
       </li>
     </ul>
   </div>
-  <div data-role='navbar' data-theme='a'>
-    <ul>
-      <li><a href='#'>Blog</a></li>
-      <li><a href='#'>Github</a></li>
-      <li><a href='#'>Twitter</a></li>
-    </ul>
+  <div data-role='footer'>
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='http://jackhq.tumblr.com' target='blog'>Blog</a></li>
+        <li><a href='http://github.com/jackhq' target='github'>Github</a></li>
+        <li><a href='http://twitter.com/jackhq' target='twitter'>Twitter</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 <div data-role='page' id='philosophy'>
-  <div data-role='navbar'>
-    <ul>
-      <li><a href='#team' data-direction='reverse'>Team</a></li>
-      <li><a href='#philosophy' class='ui-btn-active'>Philosophy</a></li>
-      <li><a href='#community'>Communitiy</a></li>
-      <li><a href='#contact'>Contact</a></li>
-    </ul>
+  <div data-role='header'>
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='#team' data-direction='reverse'>Team</a></li>
+        <li><a href='#philosophy' class='ui-btn-active'>Philosophy</a></li>
+        <li><a href='#community'>Communitiy</a></li>
+        <li><a href='#contact'>Contact</a></li>
+      </ul>
+    </div>
   </div>
   <div data-role='header' data-theme='c'>
     <center><img src='jackhq-logo.png' /></center>
   </div>  
-  <div data-role='collapsible' data-collapsed="true" data-theme='b'>
-    <h3>Agile Methodology</h3>
-    <p>Agile is not only a development methodology, but it is a state of mind. Agile is the willingness to accept that all software is able to change. With this mindset, we embrace the change and realize the importance and need for change in software.</p>
-    <p>Waterfall methodologies of predicting and scoping entire systems tends to over complicate applications. Using Agile we are able to provide minimum features and test usability, then modify as the system is being used.</p>
-    <p>This technique allows the users to start using the system sooner as well as be involved in the evolution of the software to maximize their effectiveness.</p>
+  <div data-role='content'>
+    <ul data-role='listview'>
+      <li data-role='list-divider'>Philosophy</li>
+      <li> 
+      <div data-role='collapsible' data-collapsed="true" data-theme='b'>
+        <h3>Agile Methodology</h3>
+        <div>Agile is not only a development methodology, but it is a state of mind. Agile is the willingness to accept that all software is able to change. With this mindset, we embrace the change and realize the importance and need for change in software.</div>
+        <div>Waterfall methodologies of predicting and scoping entire systems tends to over complicate applications. Using Agile we are able to provide minimum features and test usability, then modify as the system is being used.</div>
+        <div>This technique allows the users to start using the system sooner as well as be involved in the evolution of the software to maximize their effectiveness.</div>
+      </div>
+      <div data-role='collapsible' data-collapsed="true" data-theme='b'>
+        <h3>Technology</h3>
+        <div>We develop web and mobile application using the Ruby on Rails Web Framework, along with Coffee-Script, Sass and Haml. These are technologies carefully chosen and picked for maintainability and productivity excellence.</div>
+      </div>
+      <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+        <h3>Pair Programming</h3>
+        <div>All Production code written for our clients is produced in a pair programming environment. Pair Programming is the practice of two developers sharing one screen, and one task to accomplish with precision and quality. This environment produces quality code with much fewer defects than single development practices.</div>
+      </div>
+      <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+        <h3>Test Driven Development</h3>
+        <div>All Production code written for our clients is produced in a pair programming environment. Pair Programming is the practice of two developers sharing one screen, and one task to accomplish with precision and quality. This environment produces quality code with much fewer defects than single development practices.</div>
+      </div>
+      <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+        <div>We manage all of our applications in the cloud using Amazon Web Services and Heroku to provide cost-effective, scalable solutions that remove the burden of IT management from our clients. We have been working with the Cloud since 2007 and are experts in this area.</div>
+      </div>
+    </li>
+  </ul>
   </div>
-  <div data-role='collapsible' data-collapsed="true" data-theme='b'>
-    <h3>Technology</h3>
-    <p>We develop web and mobile application using the Ruby on Rails Web Framework, along with Coffee-Script, Sass and Haml. These are technologies carefully chosen and picked for maintainability and productivity excellence.</p>
+  <div data-role='footer'>
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='http://jackhq.tumblr.com' target='blog'>Blog</a></li>
+        <li><a href='http://github.com/jackhq' target='github'>Github</a></li>
+        <li><a href='http://twitter.com/jackhq' target='twitter'>Twitter</a></li>
+      </ul>
+    </div>
   </div>
-  <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-    <h3>Pair Programming</h3>
-    <p>All Production code written for our clients is produced in a pair programming environment. Pair Programming is the practice of two developers sharing one screen, and one task to accomplish with precision and quality. This environment produces quality code with much fewer defects than single development practices.</p>
-  </div>
-  <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-    <h3>Test Driven Development</h3>
-    <p>All Production code written for our clients is produced in a pair programming environment. Pair Programming is the practice of two developers sharing one screen, and one task to accomplish with precision and quality. This environment produces quality code with much fewer defects than single development practices.</p>
-  </div>
-  <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-    <p>We manage all of our applications in the cloud using Amazon Web Services and Heroku to provide cost-effective, scalable solutions that remove the burden of IT management from our clients. We have been working with the Cloud since 2007 and are experts in this area.</p>
-  </div>
-
 </div>
 <div data-role='page' id='community'>
-  <div data-role='navbar'>
-    <ul>
-      <li><a href='#team'>Team</a></li>
-      <li><a href='#philosophy'>Philosophy</a></li>
-      <li><a href='#community' class='ui-btn-active'>Communitiy</a></li>
-      <li><a href='#contact'>Contact</a></li>
-    </ul>
+  <div data-role='header'>
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='#team' data-direction='reverse'>Team</a></li>
+        <li><a href='#philosophy'>Philosophy</a></li>
+        <li><a href='#community' class='ui-btn-active'>Communitiy</a></li>
+        <li><a href='#contact'>Contact</a></li>
+      </ul>
+    </div>
   </div>
   <div data-role='header' data-theme='c'>
     <center><img src='jackhq-logo.png' /></center>
   </div>
-  <div data-role='collapsible' data-theme='b'>
-    <h3>Community</h3>
-    <p>At Jack Russell Software, we have some of the finest Ruby on Rails Developers. And we are constantly striving to better our craft as well as reach out to the community to learn and share experiences in Software Development.</p>
+  <div data-role='content'>
+    <ul data-role='listview'>
+      <li data-role='list-divider'>Community</li>
+      <li>
+        <div data-role='collapsible' data-theme='b'>
+          <h3>Community</h3>
+          <div>At Jack Russell Software, we have some of the finest Ruby on Rails Developers. And we are constantly striving to better our craft as well as reach out to the community to learn and share experiences in Software Development.</div>
+        </div>
+        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+          <h3>Local Participation</h3>
+          <div>The second Thursday of every month we host the Ruby Users Group Meetup. You can find out more about the <a href='http://charlestonruby.org'>Charleston Ruby Group</a></div>
+          <div>We are happy to sponsor and encourage local development hacking by sponsoring and participating in events like BarCampCHS and <a href='http://www.facebook.com/pages/SuperHappyDevHouse-CHS/182758535071729?v=wall&filter=2'>Super Happy Dev House</a></div>
+        </div>
+        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+          <h3>Open Source Community</h3>
+          <div>We also are very passionate about "Open Source" and sharing and contributing to open source projects. Not only to we use several open source technologies we constantly submit patches and contribute to all kinds of open source projects. We have also created applications and projects that are released as open source for usage.</div>
+          <div><a href='http://html2haml.heroku.com'>Html2Haml</a> is one of our most popular applications that is used by 200 developers a day to help them work with Haml a clean dsl for HTML.</div>
+        </div>
+      </li>
+    </ul>
   </div>
-  <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-    <h3>Local Participation</h3>
-    <p>The second Thursday of every month we host the Ruby Users Group Meetup. You can find out more about the <a href='http://charlestonruby.org'>Charleston Ruby Group</a></p>
-    <p>We are happy to sponsor and encourage local development hacking by sponsoring and participating in events like BarCampCHS and <a href='http://www.facebook.com/pages/SuperHappyDevHouse-CHS/182758535071729?v=wall&filter=2'>Super Happy Dev House</a></p>
-  </div>
-  <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-    <h3>Open Source Community</h3>
-    <p>We also are very passionate about "Open Source" and sharing and contributing to open source projects. Not only to we use several open source technologies we constantly submit patches and contribute to all kinds of open source projects. We have also created applications and projects that are released as open source for usage.</p>
-    <p><a href='http://html2haml.heroku.com'>Html2Haml</a> is one of our most popular applications that is used by 200 developers a day to help them work with Haml a clean dsl for HTML.</p>
+  <div data-role='footer'>
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='http://jackhq.tumblr.com' target='blog'>Blog</a></li>
+        <li><a href='http://github.com/jackhq' target='github'>Github</a></li>
+        <li><a href='http://twitter.com/jackhq' target='twitter'>Twitter</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 <div data-role='page' id='contact'>
-  <div data-role='navbar'>
-    <ul>
-      <li><a href='#team'>Team</a></li>
-      <li><a href='#philosophy'>Philosophy</a></li>
-      <li><a href='#community'>Communitiy</a></li>
-      <li><a href='#contact' class='ui-btn-active'>Contact</a></li>
-    </ul>
+  <div data-role='header'>    
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='#team' data-direction='reverse'>Team</a></li>
+        <li><a href='#philosophy'>Philosophy</a></li>
+        <li><a href='#community'>Communitiy</a></li>
+        <li><a href='#contact' class='ui-btn-active'>Contact</a></li>
+      </ul>
+    </div>
   </div>
   <div data-role='header' data-theme='c'>
     <center><img src='jackhq-logo.png' /></center>
   </div>
-  <div data-role='collapsible' data-theme='b'>
-    <h3>By Phone</h3>
-    <h2>843-606-0637</h2>
-  </div>
-  <div data-role='collapsible' data-theme='b'>
-    <h3>By Tweet</h3>
-    <h2><a href='http://twitter.com/jackhq'>@jackhq</a></h2>
-  </div>
-  <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-    <h3>Location</h3>
-    <address>1067 Cliffwood Drive, Mount Pleasant, SC  29464</address>
-  </div>
-  <div data-role='collapsible' data-collapsed='true' data-theme='b'>
-    <h3>By Form</h3>
-    <form>
-      <div data-role='fieldcontain'>
-        <label for='first_name'>First</label>
-        <input type='text' id='first_name' name='first_name' />
-        <label for='last_name'>Last</label>
-        <input type='text' id='last_name' name='last_name' />
-      </div>
-      <div data-role='fieldcontain'>
-        <label for='email'>Email</label>
-        <input type='text' id='email' name='email' />
-      </div>
-      <div data-role='fieldcontain'>
-        <label for='phone'>Phone</label>
-        <input type='phone' id='phone' name='phone' />
-      </div>
-      <div data-role='fieldcontain'>
-        <label for='details'>Details</label>
-        <textarea id='details' name='details'></textarea>
-      </div>
-      <button>Submit</button>
-    </form>
+  <div data-role='content'>
+    <ul data-role='listview'>
+      <li data-role='list-divider'>Contact Us By</li>
+      <li>
+        <div data-role='collapsible' data-theme='b'>
+          <h3>Phone</h3>
+          <h2><a href='tel:843-606-0637'>843-606-0637</a></h2>
+        </div>
+        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+          <h3>Email</h3>
+          <h2><a href="mailto:info@jackhq.com?subject=Contact%20JackHq">info@jackhq.com</a></h2>
+        </div>
+        <div data-role='collapsible' data-theme='b'>
+          <h3>Tweet</h3>
+          <h2><a href='http://twitter.com/jackhq'>@jackhq</a></h2>
+        </div>
+        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+          <h3>Location</h3>
+          <address>1067 Cliffwood Drive, Mount Pleasant, SC  29464</address>
+        </div>
+        <div data-role='collapsible' data-collapsed='true' data-theme='b'>
+          <h3>Form</h3>
+          <form>
+            <div data-role='fieldcontain'>
+              <label for='first_name'>First</label>
+              <input type='text' id='first_name' name='first_name' />
+              <label for='last_name'>Last</label>
+              <input type='text' id='last_name' name='last_name' />
+            </div>
+            <div data-role='fieldcontain'>
+              <label for='email'>Email</label>
+              <input type='text' id='email' name='email' />
+            </div>
+            <div data-role='fieldcontain'>
+              <label for='phone'>Phone</label>
+              <input type='phone' id='phone' name='phone' />
+            </div>
+            <div data-role='fieldcontain'>
+              <label for='details'>Details</label>
+              <textarea id='details' name='details'></textarea>
+            </div>
+            <button>Submit</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  <div data-role='footer'>
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='http://jackhq.tumblr.com' target='blog'>Blog</a></li>
+        <li><a href='http://github.com/jackhq' target='github'>Github</a></li>
+        <li><a href='http://twitter.com/jackhq' target='twitter'>Twitter</a></li>
+      </ul>
+    </div>
   </div>
 </div>
-
 </body>
 </html>
 
