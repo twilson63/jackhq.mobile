@@ -366,6 +366,24 @@ and providing it a letter, will change the color and view of the theme.
 It is real easiy to creat your own themes - check out
 [jQueryMobile](http://jquerymobile.com)
 
+---
 
+## Please see index.html to see most of these features in action.
+
+# Contribution
+
+If you would like to contribute, just fork this repo and submit a pull
+request.
+
+# Bugs
+
+Please document any issues you find with this markup to the issues tab
+in Github, we will respond quickly.
+
+# Thanks
+
+Thanks to the creators of jQuery, jQueryUI and jQueryMobile!
+
+Thank you to everyone who takes the time to read this and comment on it.
 
 
